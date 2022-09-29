@@ -31,6 +31,7 @@ class DeviceController {
         save()
     }
     
+    //MARK: - Persistence
     func save() {
         guard let url = devicesURL else {return}
         do {
