@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol DeviceTableViewCellDelegate: AnyObject {
+    func isOnSwitchedToggled(cell: DeviceTableViewCell)
+}
+
 class DeviceTableViewCell: UITableViewCell {
 //MARK: - IBOutlets
     @IBOutlet weak var deviceNameLabel: UILabel!
     @IBOutlet weak var isOnDevice: UISwitch!
+    
+    //MARK: - Properties
+    weak var delegate: DeviceTableViewCellDelegate?
     
     //MARK: - Lifecycle
     override func awakeFromNib() {
@@ -25,5 +32,6 @@ class DeviceTableViewCell: UITableViewCell {
     }
 //MARK: - IBAction
     @IBAction func isOnDeviceSwitch(_ sender: UISwitch) {
+        delegate?.isOnSwitchedToggled(cell: self)
     }
 }
