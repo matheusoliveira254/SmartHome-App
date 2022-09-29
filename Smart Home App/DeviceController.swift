@@ -32,10 +32,30 @@ class DeviceController {
     }
     
     func save() {
-        
+        guard let url = devicesURL else {return}
+        do {
+            let data = try JSONEncoder().encode(devices)
+            try data.write(to: url)
+        } catch {
+            print("Error Saving Devices", error)
+        }
+    }
+
+    func load() {
+        guard let url = devicesURL else {return}
+        do{
+            let data = try Data(contentsOf: url)
+            let devices = try JSONDecoder().decode([Device].self, from: data)
+            self.devices = devices
+        } catch {
+            print("Error Loading devices", error)
+        }
     }
     
-    func load() {
-        
+    private var devicesURL: URL? {
+        //Computed Property
+        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return nil}
+        let url = documentsDirectory.appendingPathComponent("devices.json")
+        return url
     }
 }
