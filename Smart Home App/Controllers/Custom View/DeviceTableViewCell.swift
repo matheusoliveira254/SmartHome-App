@@ -10,19 +10,20 @@ import UIKit
 class DeviceTableViewCell: UITableViewCell {
 //MARK: - IBOutlets
     @IBOutlet weak var deviceNameLabel: UILabel!
+    @IBOutlet weak var isOnDevice: UISwitch!
     
+    //MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    //MARK: - Methods
+    func updateViews(device: Device) {
+        deviceNameLabel.text = device.name
+        isOnDevice.isOn = device.isOn
     }
 //MARK: - IBAction
     @IBAction func isOnDeviceSwitch(_ sender: UISwitch) {
     }
-    
 }

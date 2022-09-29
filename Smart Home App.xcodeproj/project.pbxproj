@@ -62,12 +62,10 @@
 		A188EE4328E629AC005AC42C /* Smart Home App */ = {
 			isa = PBXGroup;
 			children = (
+				A19D291228E65C1B00D744DD /* Model */,
 				A188EE5828E629C7005AC42C /* Resources */,
-				A188EE4A28E629AC005AC42C /* Main.storyboard */,
-				A188EE5928E62FB6005AC42C /* DeviceListTableViewController.swift */,
-				A19D290C28E631D100D744DD /* DeviceTableViewCell.swift */,
-				A19D290E28E63EAD00D744DD /* Device.swift */,
-				A19D291028E6414400D744DD /* DeviceController.swift */,
+				A19D291328E65C3400D744DD /* Storyboards */,
+				A19D291428E65C4200D744DD /* Controllers */,
 			);
 			path = "Smart Home App";
 			sourceTree = "<group>";
@@ -82,6 +80,56 @@
 				A188EE5228E629AE005AC42C /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A19D291228E65C1B00D744DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A19D290E28E63EAD00D744DD /* Device.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A19D291328E65C3400D744DD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A188EE4A28E629AC005AC42C /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A19D291428E65C4200D744DD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A19D291528E65C5D00D744DD /* Model Controller */,
+				A19D291628E65C6B00D744DD /* View Controller */,
+				A19D291728E65C7B00D744DD /* Custom View */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A19D291528E65C5D00D744DD /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A19D291028E6414400D744DD /* DeviceController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		A19D291628E65C6B00D744DD /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A188EE5928E62FB6005AC42C /* DeviceListTableViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		A19D291728E65C7B00D744DD /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				A19D290C28E631D100D744DD /* DeviceTableViewCell.swift */,
+			);
+			path = "Custom View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

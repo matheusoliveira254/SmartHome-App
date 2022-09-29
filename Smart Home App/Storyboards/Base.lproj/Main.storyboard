@@ -51,6 +51,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="deviceNameLabel" destination="6Ib-UC-weN" id="Ksj-jP-jLY"/>
+                                    <outlet property="isOnDevice" destination="NiN-Z9-UCZ" id="bGC-wr-7ve"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
