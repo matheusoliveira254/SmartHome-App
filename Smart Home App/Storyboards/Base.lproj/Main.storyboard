@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -72,6 +73,54 @@
             </objects>
             <point key="canvasLocation" x="1078.2608695652175" y="111.83035714285714"/>
         </scene>
+        <!--Toggle All View Controller-->
+        <scene sceneID="IHf-Uk-6zc">
+            <objects>
+                <viewController id="jSF-Np-snP" customClass="ToggleAllViewController" customModule="Smart_Home_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HZ8-V3-mub">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="tzK-E4-UZd">
+                                <rect key="frame" x="158.5" y="396" width="97.5" height="104"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8w9-V2-PoF">
+                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Turn All On">
+                                            <color key="baseBackgroundColor" red="0.097416357539999998" green="0.233976983" blue="0.45165765769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="turnAllOnButtonTapped:" destination="jSF-Np-snP" eventType="touchUpInside" id="ZAu-Mz-X7E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyL-mA-zTv">
+                                        <rect key="frame" x="0.0" y="73" width="97.5" height="31"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Turn All Off">
+                                            <color key="baseForegroundColor" red="0.097416357539999998" green="0.233976983" blue="0.45165765769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="turnAllOffButtonTapped:" destination="jSF-Np-snP" eventType="touchUpInside" id="wok-28-weu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pmm-co-dUc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tzK-E4-UZd" firstAttribute="centerY" secondItem="HZ8-V3-mub" secondAttribute="centerY" id="1Wk-6V-ymZ"/>
+                            <constraint firstItem="tzK-E4-UZd" firstAttribute="centerX" secondItem="HZ8-V3-mub" secondAttribute="centerX" id="iqc-oI-eKi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKZ-Zj-gXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959" y="123"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="960-6M-Axr">
             <objects>
@@ -93,6 +142,9 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

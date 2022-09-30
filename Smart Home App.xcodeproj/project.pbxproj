@@ -16,6 +16,7 @@
 		A19D290D28E631D100D744DD /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D290C28E631D100D744DD /* DeviceTableViewCell.swift */; };
 		A19D290F28E63EAD00D744DD /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D290E28E63EAD00D744DD /* Device.swift */; };
 		A19D291128E6414400D744DD /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D291028E6414400D744DD /* DeviceController.swift */; };
+		A19D291928E66B0200D744DD /* ToggleAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D291828E66B0200D744DD /* ToggleAllViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A19D290C28E631D100D744DD /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		A19D290E28E63EAD00D744DD /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		A19D291028E6414400D744DD /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
+		A19D291828E66B0200D744DD /* ToggleAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAllViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				A188EE5928E62FB6005AC42C /* DeviceListTableViewController.swift */,
+				A19D291828E66B0200D744DD /* ToggleAllViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A188EE4528E629AC005AC42C /* AppDelegate.swift in Sources */,
+				A19D291928E66B0200D744DD /* ToggleAllViewController.swift in Sources */,
 				A188EE5A28E62FB6005AC42C /* DeviceListTableViewController.swift in Sources */,
 				A188EE4728E629AC005AC42C /* SceneDelegate.swift in Sources */,
 				A19D291128E6414400D744DD /* DeviceController.swift in Sources */,
