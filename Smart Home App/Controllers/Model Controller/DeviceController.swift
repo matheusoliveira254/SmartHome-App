@@ -10,13 +10,25 @@ import Foundation
 class DeviceController {
     
     //MARK: - Properties
-    static let sharedInstance = DeviceController()
-    
+//    static let sharedInstance = DeviceController()
+    private let fileName: String
     private(set) var devices: [Device] = []
     
     //MARK: - Initializers
-    init() {
+    init(fileName: String) {
+        self.fileName = fileName
         load()
+    }
+    
+    //MARK: - Methods
+    func toggleAllDevicesOn(on: Bool = true) {
+        devices.forEach {$0.isOn = on}
+        save()
+    }
+    
+    func toggleAllDevicesOff() {
+        devices.forEach {$0.isOn = false}
+        save()
     }
     
     //MARK: - Crud
@@ -31,6 +43,11 @@ class DeviceController {
         save()
     }
     
+    func delete(deviceToBeDeleted: Device) {
+        guard let index = devices.firstIndex(of: deviceToBeDeleted) else {return}
+        devices.remove(at: index)
+        save()
+    }
     //MARK: - Persistence
     func save() {
         guard let url = devicesURL else {return}

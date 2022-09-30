@@ -64,9 +64,9 @@
 		A188EE4328E629AC005AC42C /* Smart Home App */ = {
 			isa = PBXGroup;
 			children = (
-				A19D291228E65C1B00D744DD /* Model */,
 				A188EE5828E629C7005AC42C /* Resources */,
 				A19D291328E65C3400D744DD /* Storyboards */,
+				A19D291228E65C1B00D744DD /* Model */,
 				A19D291428E65C4200D744DD /* Controllers */,
 			);
 			path = "Smart Home App";

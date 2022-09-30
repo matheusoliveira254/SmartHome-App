@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zmH-QK-a0i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MsR-1l-oi0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -9,6 +9,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="CGT-WB-SIn">
+            <objects>
+                <tabBarController id="MsR-1l-oi0" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s3H-Iz-o0E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TOQ-iX-B12" kind="relationship" relationship="viewControllers" id="5L2-Tc-cGy"/>
+                        <segue destination="jSF-Np-snP" kind="relationship" relationship="viewControllers" id="TMq-gp-I3r"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ay-6j-9aX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="112"/>
+        </scene>
         <!--Smart Home-->
         <scene sceneID="cCK-EG-Z7Q">
             <objects>
@@ -62,7 +80,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Smart Home" id="dQx-ns-4OC">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="5R6-kI-4b4">
+                        <barButtonItem key="rightBarButtonItem" title="item" image="plus" catalog="system" id="5R6-kI-4b4">
                             <connections>
                                 <action selector="addDeviceBarButtonItem:" destination="mBM-5r-jvN" id="8Ch-Vs-B97"/>
                             </connections>
@@ -71,9 +89,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhR-pw-Wb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078.2608695652175" y="111.83035714285714"/>
+            <point key="canvasLocation" x="1988.4057971014495" y="111.83035714285714"/>
         </scene>
-        <!--Toggle All View Controller-->
+        <!--All Devices-->
         <scene sceneID="IHf-Uk-6zc">
             <objects>
                 <viewController id="jSF-Np-snP" customClass="ToggleAllViewController" customModule="Smart_Home_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -116,28 +134,30 @@
                             <constraint firstItem="tzK-E4-UZd" firstAttribute="centerX" secondItem="HZ8-V3-mub" secondAttribute="centerX" id="iqc-oI-eKi"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="All Devices" id="5uH-yi-FKD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKZ-Zj-gXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1959" y="123"/>
+            <point key="canvasLocation" x="728" y="832"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="960-6M-Axr">
+        <!--Home-->
+        <scene sceneID="oPV-Ad-8Nd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zmH-QK-a0i" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TOQ-iX-B12" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="EEX-oG-RAQ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2aR-yN-ARq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D81-yZ-fLd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="mBM-5r-jvN" kind="relationship" relationship="rootViewController" id="mgL-VU-hXo"/>
+                        <segue destination="mBM-5r-jvN" kind="relationship" relationship="rootViewController" id="cdt-0c-aQm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ptw-Ro-dZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mp-jT-XAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="168.11594202898553" y="111.83035714285714"/>
+            <point key="canvasLocation" x="1078.2608695652175" y="111.83035714285714"/>
         </scene>
     </scenes>
     <resources>
