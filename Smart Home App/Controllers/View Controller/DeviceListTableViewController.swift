@@ -32,6 +32,7 @@ class DeviceListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as? DeviceTableViewCell else {return UITableViewCell()}
         let device = shared.devices[indexPath.row]
         cell.updateViews(device: device)
+        cell.delegate = self
         return cell
     }
 
@@ -67,6 +68,15 @@ class DeviceListTableViewController: UITableViewController {
 
     //MARK: - IBAction
     @IBAction func addDeviceBarButtonItem(_ sender: UIBarButtonItem) {
+        presentNewDeviceAlertController()
     }
-    
+}// End of class
+
+extension DeviceListTableViewController: DeviceTableViewCellDelegate {
+    func isOnSwitchedToggled(cell: DeviceTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+        let index = shared.devices[indexPath.row]
+        shared.toggleIsOn(device: index)
+        cell.updateViews(device: index)
+    }
 }
